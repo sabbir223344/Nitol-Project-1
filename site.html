@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitol Niloy Group</title>
+    <link rel="shortcut icon" href="logo-png.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 40px 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Database Entry</h2>
+        <form>
+            <label for="db-date">Database Date:</label>
+            <input type="date" id="db-date" name="db_date" required>
+
+            <label for="db-type">Type of Database:</label>
+            <select id="db-type" name="db_type" required>
+                <option value="" disabled selected>Select a database type</option>
+                <option value="authentication">Authentication</option>
+                <option value="service">Service DB</option>
+                <option value="spd">SPD DB</option>
+            </select>
+
+            <label for="db-upload">Database Upload:</label>
+            <select id="db-upload" name="db_upload" required>
+                <option value="" disabled selected>Select upload data</option>
+                <option value="172.16.8.221">172.16.8.221</option>
+                <option value="192.168.11.201">192.168.11.201</option>
+                <option value="One drive">One drive</option>
+                <option value="Network Free DC">Network Free DC</option>
+                <option value="External HDD">External HDD</option>
+            </select>
+
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</body>
+</html>

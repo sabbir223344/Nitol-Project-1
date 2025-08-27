@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitol Niloy Group</title>
+    <link rel="shortcut icon" href="logo-png.png" type="image/x-icon">
+    <style>
+        /* Set the full-page background color */
+       body {
+            font-family: Arial, sans-serif;
+            background-image: url('bg.jpg'); /* Your uploaded image */
+            background-repeat: no-repeat;
+            background-size: cover; /* Ensures full coverage */
+            background-position: center; /* Keeps image centered */
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       
+
+        /* Style for the login box */
+        .login-container {
+            background-color: #ffffff; /* White form background */
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #007BFF;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login to Nitol Niloy Group</h2>
+
+        <form action="site.html" method="get">
+            <!-- Username -->
+            <label for="name">Username:</label>
+            <input type="text" placeholder="Enter username" id="name" name="username" required>
+
+            <!-- Password -->
+            <label for="password">Password:</label>
+            <input type="password" placeholder="Enter password" id="password" name="password" required>
+
+            <!-- Submit Button -->
+        </form>
+        <a href="site.html">
+            <input type="submit" value="Login">
+
+        </a>
+    </div>
+</body>
+</html>
