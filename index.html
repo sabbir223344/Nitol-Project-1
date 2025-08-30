@@ -6,13 +6,12 @@
     <title>Nitol Niloy Group</title>
     <link rel="shortcut icon" href="logo-png.png" type="image/x-icon">
     <style>
-        /* Set the full-page background color */
-       body {
+        body {
             font-family: Arial, sans-serif;
-            background-image: url('bg.jpg'); /* Your uploaded image */
+            background-image: url('bg.jpg');
             background-repeat: no-repeat;
-            background-size: cover; /* Ensures full coverage */
-            background-position: center; /* Keeps image centered */
+            background-size: cover;
+            background-position: center;
             height: 100vh;
             margin: 0;
             padding: 0;
@@ -20,11 +19,9 @@
             justify-content: center;
             align-items: center;
         }
-       
 
-        /* Style for the login box */
         .login-container {
-            background-color: #ffffff; /* White form background */
+            background-color: #ffffff;
             padding: 30px 40px;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -54,7 +51,7 @@
             box-sizing: border-box;
         }
 
-        input[type="submit"] {
+        button{
             width: 100%;
             background-color: #007BFF;
             color: white;
@@ -66,30 +63,46 @@
             transition: background-color 0.3s ease;
         }
 
-        input[type="submit"]:hover {
+        button:hover {
             background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login to Nitol Niloy Group</h2>
+      <div class="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Enter Username">
+    <input type="password" id="password" placeholder="Enter Password">
+    <button onclick="login()">Login</button>
+    <p id="message"></p>
 
-        <form action="site.html" method="get">
-            <!-- Username -->
-            <label for="name">Username:</label>
-            <input type="text" placeholder="Enter username" id="name" name="username" required>
-
-            <!-- Password -->
-            <label for="password">Password:</label>
-            <input type="password" placeholder="Enter password" id="password" name="password" required>
-
-            <!-- Submit Button -->
-        </form>
-        <a href="site.html">
-            <input type="submit" value="Login">
-
-        </a>
     </div>
+
+     <script>
+    // Unique username and password
+    const validUser = "admin";
+    const validPass = "12345";
+
+    function login() {
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const message = document.getElementById("message");
+
+      if (username === validUser && password === validPass) {
+        message.style.display = "block";
+        message.style.color = "green";
+        message.textContent = "✅ Login Successful!";
+        // Redirect to dashboard after 1 sec
+        setTimeout(() => {
+          window.location.href = "site.html";
+        }, 1000);
+      } else {
+        message.style.display = "block";
+        message.style.color = "red";
+        message.textContent = "❌ Wrong Username or Password!";
+      }
+    }
+  </script>
+
 </body>
 </html>
